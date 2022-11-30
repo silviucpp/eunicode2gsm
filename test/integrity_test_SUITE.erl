@@ -17,7 +17,8 @@ groups() -> [
         test_utf8_check,
         tes_no_utf8_input,
         test_no_transliteration,
-        test_transliteration
+        test_transliteration,
+        test_new_line_and_tabs_normalization
     ]}
 ].
 
@@ -48,4 +49,11 @@ test_transliteration(_Config) ->
     ?assertEqual(true, eunicode2gsm_nif:init_transliteration_map(true)),
     ?assertEqual(true, eunicode2gsm:requires_transliteration(?GSM_ALPHABET_UTF8)),
     ?assertEqual(<<"@£$¥èéùìòÇØøÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ!\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà^()\(-)|€"/utf8>>, eunicode2gsm:transliterate(?GSM_ALPHABET_UTF8)),
+    ok.
+
+test_new_line_and_tabs_normalization(_Config) ->
+    ?assertEqual(true, eunicode2gsm_nif:init_transliteration_map(false)),
+    BinInput = <<"@\n£\r\n$\t¥\f˜〜\r"/utf8>>,
+    ?assertEqual(true, eunicode2gsm:requires_transliteration(BinInput)),
+    ?assertEqual(<<"@\n£\n$ ¥ ~~\r"/utf8>>, eunicode2gsm:transliterate(BinInput)),
     ok.

@@ -11,7 +11,7 @@ CPUS=`getconf _NPROCESSORS_ONLN 2>/dev/null || sysctl -n hw.ncpu`
 U2GSM_DESTINATION=unicode2gsm
 U2GSM_REPO=https://github.com/silviucpp/unicode2gsm.git
 U2GSM_BRANCH=main
-U2GSM_REV=e64c6ada7b292b0c18a77597229a454cd5edd663
+U2GSM_REV=24406c85a665d4cb73f3604a7956e71e182439a0
 U2GSM_SUCCESS=build/libunidecode2gsm.a
 
 fail_check()

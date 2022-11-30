@@ -2,7 +2,7 @@
     {description, "Erlang library for unicode to gsm transliteration"},
     {licenses, ["MIT"]},
     {links,[{"Github","https://github.com/silviucpp/eunicode2gsm"}]},
-    {vsn, "1.0.0"},
+    {vsn, "1.1.0"},
     {registered, []},
     {applications, [
         kernel,
