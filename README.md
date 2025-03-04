@@ -1,6 +1,6 @@
 # eunicode2gsm
 
-[![Build Status](https://travis-ci.com/silviucpp/eunicode2gsm.svg?branch=main)](https://travis-ci.com/github/silviucpp/unicode2gsm)
+[![Build Status](https://app.travis-ci.com/silviucpp/eunicode2gsm.svg?branch=main)](https://travis-ci.com/github/silviucpp/unicode2gsm)
 [![GitHub](https://img.shields.io/github/license/silviucpp/eunicode2gsm)](https://github.com/silviucpp/unicode2gsm/blob/master/LICENSE)
 [![Hex.pm](https://img.shields.io/hexpm/v/eunicode2gsm)](https://hex.pm/packages/eunicode2gsm)
 
